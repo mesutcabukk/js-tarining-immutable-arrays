@@ -30,25 +30,26 @@ function findNumberOfPassengers(pPassengers){
 }
 
 function findPersonByIndex(pPassengers, pIndex){
-    return pPassengers[pIndex-1].firstname;
+    return pPassengers.[pIndex-1];
 }
-//4
+
 function findNumberOfWomen(pPassengers){
-    let theWomen = pPassengers.filter(function(pPerson){
+    var theWomen = pPassengers.filter(function(pPerson){
         return pPerson.gender == "F";
     });
-    
+
     return theWomen.length;
 }
-//5
+
 function findNumberOfMen(pPassengers){
     return pPassengers;
 }
-//3
+
 function findPersonByTicketId(pPassengers, pId){
-    const person = pPassengers.find(function(){
+    const person = pPassengers.find(function(pPerson){
         return pPerson.id == pId;
     });
+
     return person.lastname;
 }
 
@@ -57,5 +58,5 @@ function findPassengersWithNoChildren(pPassengers){
 }
 
 function findUnderagePassengers(pPassengers){
-    return pPassengers;f
+    return pPassengers;
 }
